@@ -1,12 +1,12 @@
 on:
   pull_request:
-    paths:
-      - 'src/golang-example/**'
+    # paths:
+    #   - 'src/golang-example/**'
 jobs:
   test:
-    defaults:
-      run:
-        working-directory: ./src/golang-example
+    # defaults:
+    #   run:
+    #     working-directory: ./src/golang-example
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
