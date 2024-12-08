@@ -4,9 +4,6 @@ on:
     #   - 'src/golang-example/**'
 jobs:
   test:
-    defaults:
-      run:
-        working-directory: src/golang-example
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
@@ -20,3 +17,4 @@ jobs:
           go-version: '1.23.x'
       - name: Test
         run: go test -v
+        working-directory: src/golang-example
