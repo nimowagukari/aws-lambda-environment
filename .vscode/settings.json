@@ -1,0 +1,11 @@
+{
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "bluebrown.yamlfmt"
+    },
+    "[json]": {
+        "files.insertFinalNewline": true
+    },
+    "[jsonc]": {
+        "files.insertFinalNewline": true
+    }
+}
