@@ -26,9 +26,8 @@ func TestHandleRequest(t *testing.T) {
 				if (err != nil) != tc.wantErr {
 					t.Error(err)
 				}
-				want := tc.want
-				if got != want {
-					t.Errorf("got: %v, want: %v\n", got, want)
+				if got != tc.want {
+					t.Errorf("got: %v, want: %v\n", got, tc.want)
 				}
 			},
 		)

@@ -12,7 +12,8 @@ func main() {
 	lambda.Start(handleRequest)
 }
 
-func handleRequest(ctx context.Context, event struct{}) (string, error) {
+func handleRequest(ctx context.Context, event interface{}) (string, error) {
+	// 現時点では LambdaContext の有無で挙動は変えない為、２つ目の返り値は捨てる
 	lc, _ := lambdacontext.FromContext(ctx)
 	fmt.Printf("event: %#v\n", event)
 	fmt.Printf("context: %#v\n", lc)
