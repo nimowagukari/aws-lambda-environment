@@ -1,8 +1,10 @@
-name: Python Test
+name: Python Build and Deploy for dev
 on:
   pull_request:
     paths:
       - "src/python-example/**"
+    types:
+      - closed
 jobs:
   test:
     runs-on: ubuntu-latest
